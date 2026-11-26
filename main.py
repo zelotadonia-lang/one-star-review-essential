@@ -22,6 +22,7 @@ def main():
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
         f.write(ENTRY)
+    assert open("/output/entry.txt", encoding="utf-8").read() == ENTRY, "written entry must match ENTRY exactly"
 
 
 if __name__ == "__main__":
